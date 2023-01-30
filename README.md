@@ -19,7 +19,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### `Issue`
 
-I have an issue with the chart endpoint so I get the data from postman response and create a dummey-data.json file 
+I have an issue with the chart endpoint as it returns <b>CORS ERROR</b> so I get the data from postman response and create a dummey-data.json file 
 and get the data from this JSON file and make the filteration on local
 
 ### `chart package`
