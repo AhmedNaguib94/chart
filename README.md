@@ -17,3 +17,15 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 
+### `Issue`
+
+I have an issue with the chart endpoint so I get the data from postman response and create a dummey-data.json file 
+and get the data from this JSON file and make the filteration on local
+
+### `chart package`
+
+I used <b>APEXCHARTS</b> package because it gives me the ability:
+- to make chart responsive
+- option to zoom-in and zoom-out in the chart
+- able to customize style and tooltip
+- free to use
