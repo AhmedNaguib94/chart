@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts'
 import { getChartDataApi } from "../../../data/api/char.api";
 import { formatChartData } from "../../../helper/helper-functions";
 
-const ChartComponent = () => {
+const ChartComponent = ({fromDate, toDate}) => {
   const [chartData, setChartData] = useState({
     options: {
       xaxis: {
@@ -18,13 +18,17 @@ const ChartComponent = () => {
   });
 
   useEffect(() => {
+    getChartData(fromDate, toDate)
+  }, [fromDate, toDate])
+
+  const getChartData = (fromDate = null, toDate = null) => {
     getChartDataApi().then(
       res => {
         setChartData(current => {
-          return { ...current, series: [{ data: formatChartData(res.data) }] }
+          return { ...current, series: [{ data: formatChartData(res.data, fromDate, toDate) }] }
         })
       })
-  }, [])
+  }
 
   return (
     <div id="chart">
