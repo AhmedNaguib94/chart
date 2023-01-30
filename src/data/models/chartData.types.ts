@@ -10,3 +10,13 @@ export interface ChartDataResponse {
   Low: number;
   Close: number;
 }
+
+export interface ChartProps {
+  fromDate: string | undefined;
+  toDate: string | undefined;
+}
+
+export interface ChartConfig {
+  options: {};
+  series?: any[];
+}
