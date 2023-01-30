@@ -12,10 +12,8 @@ const App = (): JSX.Element => {
     dates: null | (Dayjs | null)[],
     dateStrings: string[]
   ): void => {
-    if (dates) {
-      setFromDate(dateStrings[0]);
-      setToDate(dateStrings[1]);
-    }
+    setFromDate(dateStrings[0]);
+    setToDate(dateStrings[1]);
   };
 
   return (
@@ -24,6 +22,6 @@ const App = (): JSX.Element => {
       <ChartComponent fromDate={fromDate} toDate={toDate} />
     </div>
   );
-}
+};
 
 export default App;
