@@ -1,0 +1,11 @@
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.date-picker label {
+    font-weight: 600;
+    margin-bottom: 10px;
+}

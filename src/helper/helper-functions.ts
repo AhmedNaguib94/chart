@@ -8,7 +8,7 @@ export const formatChartData = (
 ): ChartData[] => {
   if (fromDate && toDate) {
     return mapDatetoChartFormat(
-      data?.filter((item: any) => {
+      data?.filter((item: ChartDataResponse) => {
         if (moment(item.Date).isBetween(fromDate, toDate)) {
           return item;
         }
@@ -20,7 +20,7 @@ export const formatChartData = (
 };
 
 const mapDatetoChartFormat = (data: ChartDataResponse[]): ChartData[] => {
-  return data?.map((item: any) => {
+  return data?.map((item: ChartDataResponse) => {
     return {
       x: item.Date,
       y: [item.Open, item.High, item.Low, item.Close],

@@ -2,6 +2,7 @@ import { DatePicker } from "antd";
 import dayjs from "dayjs";
 import type { Dayjs } from "dayjs";
 import { DatePrickerProps } from "../../../data/models/date-picker.types";
+import "./date-picker.css";
 
 const { RangePicker } = DatePicker;
 
@@ -16,11 +17,14 @@ const DatePickerComponent = ({ onChange }: DatePrickerProps): JSX.Element => {
   ];
 
   return (
-    <RangePicker
-      presets={rangePresets}
-      format="YYYY/MM/DD"
-      onChange={onChange}
-    />
+    <div className="date-picker">
+      <label>Select Date</label>
+      <RangePicker
+        presets={rangePresets}
+        format="YYYY/MM/DD"
+        onChange={onChange}
+      />
+    </div>
   );
 };
 

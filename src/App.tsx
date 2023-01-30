@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import ChartComponent from "./pages/components/chart/chart";
-import DatePickerComponent from "./pages/components/datePicker/data-picker";
+import DatePickerComponent from "./pages/components/datePicker/date-picker";
 import type { Dayjs } from "dayjs";
 
 const App = (): JSX.Element => {
@@ -19,7 +19,7 @@ const App = (): JSX.Element => {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <DatePickerComponent onChange={onRangeChange} />
       <ChartComponent fromDate={fromDate} toDate={toDate} />
     </div>
